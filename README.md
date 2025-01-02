@@ -11,7 +11,7 @@ UART programmer SPI FLASH 25-series on FPGA or CPLD
 
 Работа проверена на FPGA Altera Cyclone IV и на Gowin TangNano9k (в последней использовался встроенный USB-UART и прошивалась встроенная SPI Flash, для этого необходимо в настройках проекта указать, что пины Dual purpose MSPI используются в качестве General IO).
 
-Программа для ПК используется из другого моего проекта [UART_Prog](https://github.com/AndrejChoo/uart_prog). Написана на C# для Windows и переписана на Qt для Windows и Linux:
+Программа для ПК используется из другого моего проекта [UART_Prog](https://github.com/AndrejChoo/uart_prog), можно брать оттуда. Программа написана на C# для Windows x64 и переписана на Qt для Windows и Linux x64 и Aarch64.
 
 ![soft](https://github.com/AndrejChoo/uart_prog/blob/main/software/soft.png)
 
