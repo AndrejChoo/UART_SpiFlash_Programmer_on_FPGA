@@ -83,6 +83,7 @@ SRAM_DP share_mem(
     );
 
 /*
+//Altera dualport RAM
 SRAM_DP share_mem(
         .q_a(EXCHANGE_R), //output [7:0] douta
         .q_b(MAIN_BUFF_R), //output [7:0] doutb
