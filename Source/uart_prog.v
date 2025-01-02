@@ -62,6 +62,7 @@ wire[7:0]EXCHANGE_R,EXCHANGE_W,MAIN_BUFF_R,MAIN_BUFF_W;
 wire[9:0]EXCHANGE_ADD,MAIN_BUFF_ADD;
 wire EXCHANGE_CLK,EXCHANGE_WR,MAIN_BUFF_CLK,MAIN_BUFF_WR;
 
+//Gowin dualport RAM
 SRAM_DP share_mem(
         .douta(EXCHANGE_R), //output [7:0] douta
         .doutb(MAIN_BUFF_R), //output [7:0] doutb
@@ -80,6 +81,21 @@ SRAM_DP share_mem(
         .adb(MAIN_BUFF_ADD), //input [9:0] adb
         .dinb(MAIN_BUFF_W) //input [7:0] dinb
     );
+
+/*
+SRAM_DP share_mem(
+        .q_a(EXCHANGE_R), //output [7:0] douta
+        .q_b(MAIN_BUFF_R), //output [7:0] doutb
+        .clock_a(EXCHANGE_CLK), //input clka
+        .wren_a(EXCHANGE_WR), //input wrea
+        .clock_b(MAIN_BUFF_CLK), //input clkb
+        .wren_b(MAIN_BUFF_WR), //input wreb
+        .address_a(EXCHANGE_ADD), //input [9:0] ada
+        .data_a(EXCHANGE_W), //input [7:0] dina
+        .address_b(MAIN_BUFF_ADD), //input [9:0] adb
+        .data_b(MAIN_BUFF_W) //input [7:0] dinb
+    );
+*/
 
 ////////////////////////////////////////RX State machine///////////////////////////////////////////
 localparam WR_ROUTINE = 13;
